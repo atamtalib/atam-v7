@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	var ccmaths = parseFloat(prompt("control continu math :"));
+    
+	var cfmaths = parseFloat(prompt("control final :"));
+    var coefmaths = parseFloat(prompt("coefficient math :"));
+    
+    var ccphy = parseFloat(prompt("control continu physique:"));
+    
+	var cfphy = parseFloat(prompt("control final :"));
+var coefphy = parseFloat(prompt("coefficient physique :"));
+
+	var ccsport = parseFloat(prompt("control continu sport :"));
+    
+	var cfsport = parseFloat(prompt("control final :"));
+    var coefsport = parseFloat(prompt("coefficient sport :"));
+    var sommecoef = coefmaths+coefsport+coefphy;
+    	var method = parseFloat(prompt("tapez 1 pour 67%33% ou 2 pour 60%40%  :"));
+    	if (method=1) {
+var moymaths = parseFloat(((ccmaths+cfmaths*2)/3).toFixed(2));
+var moyphy = parseFloat(((ccphy+cfphy*2)/3).toFixed(2));
+var moysport = parseFloat(((ccsport+cfsport*2)/3).toFixed(2));
+}
+if (method=2)   {
+	var moymaths = parseFloat(((ccmaths*2+cfmaths*3)/5).toFixed(2));
+var moyphy = parseFloat(((ccphy*2+cfphy*3)/5).toFixed(2));
+var moysport = parseFloat(((ccsport*2+cfsport*3)/5).toFixed(2));
+}
+var moygen = ((moyphy*coefphy)+(moysport*coefsport)+(moymaths*coefmaths))/sommecoef;
+   var moygen =parseFloat(moygen.toFixed(2));
+    		
+    			 
+    		 
+
+</script>
+<table>
+  <tr>
+    <th>modules</th>
+    <th>control continu</th>
+    <th>control final</th>
+    <th>coefficient</th>
+    <th>moyen</th>
+  </tr>
+  <tr>
+    <td>maths</td>
+    <td><script type="text/javascript">document.write(ccmaths);</script></td>
+    <td><script type="text/javascript">document.write(cfmaths);</script></td>
+    <td><script type="text/javascript">document.write(coefmaths);</script></td>
+    <td><script type="text/javascript">document.write(moymaths);</script></td>
+    
+  </tr>
+  <tr>
+    <td>physique</td>
+    <td><script type="text/javascript">document.write(ccphy);</script></td>
+    <td><script type="text/javascript">document.write(cfphy);</script></td>
+    <td><script type="text/javascript">document.write(coefphy);</script></td>
+    <td><script type="text/javascript">document.write(moyphy);</script></td>
+    
+  </tr>
+  <tr>
+    <td>sport</td>
+    <td><script type="text/javascript">document.write(ccsport);</script></td>
+    <td><script type="text/javascript">document.write(cfsport);</script></td>
+    <td><script type="text/javascript">document.write(coefsport);</script></td>
+    <td><script type="text/javascript">document.write(moysport);</script></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF00">moyen general:<script type="text/javascript">document.write(moygen);</script></td>
+    <td></td>
+    <td bgcolor="#00FF00">statut:<script type="text/javascript">
+    	if (moygen>=10) {document.write("admit");} else{document.write("ajourner")} 
+    </script></td>
+    <td> </td>
+    <td bgcolor="#FF0000">montion:<script type="text/javascript">if (moygen>=18) {document.write("excellent");} else if (moygen>=16) {document.write("tres bien");}else if (moygen>=14){document.write("bien");}else if (moygen>=10) {document.write("passable");} else{document.write("nta dab")} </script></td>
+    
+  </tr>
+</table>
+
+</body>
+</html>
